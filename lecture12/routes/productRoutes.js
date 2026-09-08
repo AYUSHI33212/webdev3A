@@ -2,7 +2,7 @@ const express=require("express");
 const router=express.Router();
 const products=require("../Database/data.js");
 const {getproducts,getproductbyid,addproduct,updateproduct,deleteproduct}=require("../controller/productcontroller.js")
-
+router .get("/search",getproducts)
 router .get("/",getproducts)
 
 router .get("/:id",getproductbyid  )

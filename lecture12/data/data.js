@@ -18,3 +18,4 @@ const products=[
         price:20000
     }
 ]
+module.exports=products;

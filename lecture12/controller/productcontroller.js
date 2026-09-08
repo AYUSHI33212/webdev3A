@@ -37,4 +37,20 @@ const deleteproduct=(req,res)=>{
     products.splice(index,1);
     res.json({success:true,result});
 }
-module.exports={getproducts,getproductbyid,addproduct,updateproduct,deleteproduct}
+const searchproducts=(req,res)=>{
+    const(name,category,price)=req.query;
+    if(name){
+        result=products.filter((product)=>product.name===name);
+    
+    }
+    if(category){
+        result=products.filter((product)=>product.category===category);
+    }
+    if(price){
+        result=products.filter((product)=>product.price===price);
+    }
+    res.json({total:result.length,result});
+}
+
+
+module.exports={getproducts,getproductbyid,addproduct,updateproduct,deleteproduct,searchproducts}
