@@ -1,6 +1,18 @@
 const express = require("express");
+const morgan = require("morgan");
 const app = express();
 const PORT = 3000;
+
+app.use(morgan("dev")); // third party middleware
+
+// const loggerMiddleware = (req, res, next) => {
+//     console.log({
+//         "request method": req.method,
+//         "URL": req.url,
+//         "Time": new Date().toLocaleString()
+//     });
+//     next();
+// }
 
 const logMIddleware = (req, res, next) => { //custom middleware function
     console.log(`${req.method} req.method} ${req.url} ${new Date()}`);
@@ -9,7 +21,7 @@ const logMIddleware = (req, res, next) => { //custom middleware function
 }
 
 const apicheckMiddleware = (req, res, next) => {
-    if(req.query.API_KEY === "12345") {
+    if(req.query.API_KEY === "12345") {/
         next();
     } else {
         res.status(401).send("Unauthorized");
@@ -17,6 +29,7 @@ const apicheckMiddleware = (req, res, next) => {
 }   
 // app.use(logMIddleware); // global middleware
 // app.use(apicheckMiddleware);
+// app.use(loggerMiddleware); // global middleware
 app.get("/", (req, res) => {
 
     console.log("Hello World");
