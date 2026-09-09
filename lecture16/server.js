@@ -21,7 +21,7 @@ const logMIddleware = (req, res, next) => { //custom middleware function
 }
 
 const apicheckMiddleware = (req, res, next) => {
-    if(req.query.API_KEY === "12345") {/
+    if(req.query.API_KEY === "12345") {
         next();
     } else {
         res.status(401).send("Unauthorized");
