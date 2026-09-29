@@ -2,7 +2,7 @@ const express = require("express");
 
 const router = express.Router();
 
-const students = require("../data/students");
+const students = require("../data/students.js");
 
 router.get("/", (req, res) => {
     res.status(200).json(students);

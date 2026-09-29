@@ -1,13 +1,13 @@
 let students = [
     {
         id: 1,
-        name: "Krishna",
+        name: "Rohit",
         age: 18,
         course: "BTech CSE"
     },
     {
         id: 2,
-        name: "Ayushi",
+        name: "kajal",
         age: 19,
         course: "Btech UX/UI"
     },
