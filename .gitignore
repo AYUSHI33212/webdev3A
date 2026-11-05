@@ -1,1 +1,3 @@
 product-crud/
+.env
+node_modules/

@@ -7,6 +7,7 @@ let students = [
     },
     {
         id: 2,
+    
         name: "kajal",
         age: 19,
         course: "Btech UX/UI"
@@ -28,6 +29,11 @@ let students = [
         name: "Mahesh",
         age: 22,
         course: "BA"  
+      },{
+        id: 7,
+        name:"raghav",
+        age:23,
+        course:"BBA"
     }
 ];
 
